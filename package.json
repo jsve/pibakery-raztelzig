@@ -1,5 +1,5 @@
 { "dependencies" :
-  { "xpath" : "latest"
+  { "xpath.js" : "latest"
   , "xmldom" : "latest"
   }
 }
