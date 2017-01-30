@@ -1,9 +1,12 @@
-var select = require('xpath.js')
-      , dom = require('xmldom').DOMParser
- 
+var replace = require("replace")
 
-var xml = "<book><title>Harry Potter</title></book>"
-var doc = new dom().parseFromString(xml)    
-var nodes = select(doc, "//title")
-console.log(nodes[0].localName + ": " + nodes[0].firstChild.data)
-console.log("node: " + nodes[0].toString())
+var stars = require('./behind_the_stars.json')
+
+for (var key in stars) {
+	string_to_change = "{{3}" + key + "}{3}"
+	replace ({
+		regex: string_to_change, 
+		replacement: stars[key], 
+		paths: ["test.xml"],
+	})
+}
