@@ -1,6 +1,5 @@
 { "dependencies" :
-  { "xpath.js" : "latest"
-  , "xmldom" : "latest"
-  , "replace": "latest"
+  { "replace-in-file": "latest",
+  	"quickly-copy-file": "latest"
   }
 }
