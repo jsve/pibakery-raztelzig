@@ -3,8 +3,8 @@ var copyFile = require("quickly-copy-file")
 
 var stars = require('./behind_the_stars.json')
 
-file_with_stars = "test.xml"
-file_with_secrets = "test_realz.xml"
+file_with_stars = "recipe_nopw.xml"
+file_with_secrets = "recipe.xml"
 
 function makeReplacements(stars){
 	for (var key in stars) {
@@ -19,4 +19,5 @@ function makeReplacements(stars){
 
 copyFile(file_with_stars, file_with_secrets)
 	.then(() => makeReplacements(stars))
+	.catch(function(error) { console.error(error);});
 
